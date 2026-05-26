@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊兒童國內出養困境｜融媒體專題</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app-container">
+
+    <section id="stage-1" class="screen-section active">
+        <div class="pixel-box">
+            <h1>特殊兒童國內出養困境</h1>
+            <p class="desc">在台灣，許多帶有特殊需求的孩子正在等待一個家。這條尋家之路，比想像中更加漫長與艱辛。</p>
+            
+            <div class="interaction-area">
+                <p>滑動進度條，猜猜看 2025 年有多少特殊兒童順利在台灣找到家？</p>
+                <input type="range" min="0" max="100" value="50" class="pixel-slider" id="guess-slider">
+                <p class="slider-value">你的預測：<span id="slider-display">50</span>%</p>
+                <button class="pixel-btn" id="btn-submit-guess">提交答案 (A)</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="stage-1-result" class="screen-section hidden">
+        <div class="pixel-box">
+            <h2>現實數據：16.88% (13/77)</h2>
+            <p id="result-feedback">願意收養特殊兒童的家庭比你想像中更少...</p>
+            <p class="stats-compare">大多數人的預測都比較樂觀。體制內的現實，遠比數據更沉重。</p>
+            <div class="btn-group">
+                <button class="pixel-btn primary" id="btn-to-stage-2">體驗社工尋家路 (B)</button>
+                <button class="pixel-btn secondary" id="btn-to-stage-3">直接閱讀新聞 (C)</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="stage-2" class="screen-section hidden">
+        <div class="game-hud pixel-box">
+            <span>個案年齡：<span id="child-age">1歲 0個月</span></span>
+            <span class="warning-text hidden" id="age-warning">⚠ 逼近黃金期 ⚠</span>
+        </div>
+
+        <div id="game-main" class="game-screen pixel-box active">
+            <h2>案件指派</h2>
+            <p>你是一名社工。今天收到一個個案，這是一名帶有特殊需求的孩子，其母親委託出養。</p>
+            <p>【操作說明】國內出養的黃金時期極為短暫。請在孩子成長到 6 歲前，努力幫孩子尋找合適的收養家庭。</p>
+            <button class="pixel-btn">開始任務</button>
+        </div>
+
+        <div id="game-g3" class="game-screen pixel-box hidden">
+            <h2>社工訪視日記</h2>
+            <div class="event-popup pixel-box-inner">
+                <h3>突發事件：醫療需求</h3>
+                <p>孩子發展遲緩跡象明顯，需要安排每週三下午的復健早療。</p>
+                <button class="pixel-btn action-btn">安排早療</button>
+            </div>
+            <p class="story-text">在寄養家庭的悉心照顧下，孩子撐過了這段時間。但寄養畢竟只是中繼站，我們必須趕快幫他找一個真正安穩的家...</p>
+            <button class="pixel-btn">進入家庭篩選</button>
+        </div>
+
+        <div id="game-g4" class="game-screen pixel-box hidden">
+            <h2>收養家庭評估</h2>
+            <p>請檢視以下家庭檔案。向左滑(不適合) / 向右滑(適合)。</p>
+            <div class="file-cards-container">
+                <div class="pixel-card">
+                    <h3>家庭 A</h3>
+                    <p>收養動機：完整家庭<br>經濟能力：中上<br>支持系統：完善</p>
+                </div>
+            </div>
+            <button class="pixel-btn">完成篩選</button>
+        </div>
+
+        <div id="game-r1" class="game-screen pixel-box hidden error-state">
+            <h2>尋家失敗：孩子滿 6 歲了...</h2>
+            <p>你沒能在黃金境內收養期內幫孩子找到家。在台灣，3 歲以上的特殊兒童媒合率便會雪崩式下滑，滿 6 歲後，國內家庭的收養意願幾乎為零。</p>
+            <button class="pixel-btn primary">閱讀完整報導</button>
+        </div>
+    </section>
+
+    <section id="stage-3" class="screen-section hidden">
+        <div class="parallax-section header-parallax">
+            <div class="parallax-content pixel-box">
+                <h1>家還有多遠？</h1>
+                <h2>特殊兒童收養困境下的漫漫長路</h2>
+                <p>台灣對特殊兒的收養意願為何如此低迷？當多數家庭傾向選擇健康個案，那些帶有特殊需求的孩子，只能在機構長大，或被推向遙遠的異國。</p>
+                <div class="scroll-indicator">▼ 向下滑動探索報導 ▼</div>
+            </div>
+        </div>
+
+        <article class="article-content">
+            <div class="text-block">
+                <span class="eyebrow">緣起</span>
+                <h3>「我並不是為了領養一個小孩而去領養，而是剛好遇到我女兒。」</h3>
+                <p>坐在自家經營的藥局內，貝貝媽回想起十八年前與女兒相遇的過程。當時她在基金會擔任週末寄養家庭義工，將才四個月大、因生父母藥癮而成為「毒寶寶」的貝貝帶回家...</p>
+            </div>
+        </article>
+
+        <div class="parallax-section image-parallax" style="background-image: url('placeholder.jpg');">
+            </div>
+
+        <article class="article-content">
+            <div class="text-block">
+                <h3>寄養專收養：愛與安置名額的殘酷拉扯</h3>
+                <p>寄養家庭若決定「自己收養」孩子，等同於減少一個社會安置名額。這使家庭陷入殘酷的二選一：</p>
+                <div class="balance-scale">
+                    <div class="scale-item left pixel-box">
+                        <h4>選擇愛這個孩子</h4>
+                        <p>自己收養，但佔用社會資源</p>
+                    </div>
+                    <div class="scale-item right pixel-box cold-theme">
+                        <h4>選擇讓出名額</h4>
+                        <p>放棄收養，讓孩子進入未知的媒合體系</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="article-content footer-content">
+            <div class="quote-block pixel-box">
+                <p>「那（些挑戰）就是我們的生活啊，一個家庭本來就有各種各樣的樣貌。」</p>
+                <span>—— 貝貝媽（化名），收養人</span>
+            </div>
+            <p class="warm-ending">唯有先建構完善的制度環境與支持體系，能接住收養家庭，收養的意願才會提高，讓這群特殊的孩子，在自己的土地上找到歸屬。</p>
+        </article>
+
+    </section>
+</div>
+
+</body>
+</html>
